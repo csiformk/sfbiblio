@@ -10,6 +10,19 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 	</head>
 	<body>
+		<header>
+			<h1>
+				<a href="{{ path('home') }}">BIBLIOSF</a>
+			</h1>
+			<nav>
+				{% if app.user %}
+					<a href="{{ path('logout') }}">Déconnexion</a>
+				{% else %}
+					<a href="{{ path('login') }}">Connexion</a>
+					<a href="{{ path('register') }}">Enregistrement</a>
+				{% endif %}
+			</nav>
+		</header>
 		<main>
 			{% block body %}{% endblock %}
 		</main>

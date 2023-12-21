@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<section>
+{% for book in books %}
+    <article>
+    <h3>{{ book.title }}</h3>
+    <img src="{{ book.image }}" alt="{{ book.title }}">
+    </article>
+{% endfor %}
+</section>
+{% endblock %}
