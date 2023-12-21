@@ -41,3 +41,9 @@ A l'aide de **Symfony** vous devez réaliser un site web qui listes des livres d
 - Installation de **Faker** : `composer require fakerphp/faker`
 - Ajout de classes de fixture : `symfony console make:fixtures`
 - On charge les fixtures : `symfony console doctrine:fixtures:load` ou `symfony console doctrine:fixtures:load --append`
+
+# Email
+
+- Installation du bundle mail : `composer require symfony/mailer`
+- Installation d'un *mail catcher* : **mailcatcher,mailhog,maildev**
+- On renseigne le **MAILER_DSN** dans **.env.local**
