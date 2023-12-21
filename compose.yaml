@@ -11,9 +11,13 @@ services:
     volumes:
       - dbceppic:/var/lib/mysql
   
-  mailer:
-    image: schickling/mailcatcher
-    ports: ["1025:1025", "1080:1080"]
+  # mailer:
+  #   image: schickling/mailcatcher
+  #   ports: ["1025:1025", "1080:1080"]
+
+  mailhog:
+    image: mailhog/mailhog
+    ports: ["1025:1025", "8025:8025"]
 
 volumes:
   dbceppic:
