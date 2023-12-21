@@ -34,3 +34,10 @@ A l'aide de **Symfony** vous devez réaliser un site web qui listes des livres d
 
 - Création des entitées **books** et **users** : `symfony make:entity` `symfony make:user`
 - Création des cruds pour les entitées : `symfony make:crud`
+
+# Fixtures
+
+- Installation du **bundle** pour les **fixtures** : `composer require --dev orm-fixtures`
+- Installation de **Faker** : `composer require fakerphp/faker`
+- Ajout de classes de fixture : `symfony console make:fixtures`
+- On charge les fixtures : `symfony console doctrine:fixtures:load` ou `symfony console doctrine:fixtures:load --append`
