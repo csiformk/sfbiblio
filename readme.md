@@ -57,5 +57,9 @@ A l'aide de **Symfony** vous devez réaliser un site web qui listes des livres d
 
 # Faire un backup de ses bases de données dans les containers docker :
 
-`docker exec mariadbceppic bash -c 'mysqldump -u root -proot books > /tmp/books.sql' && docker cp mariadb
-ceppic:/tmp/books.sql ./`
+`docker exec mariadbceppic bash -c 'mysqldump -u root -proot books > /tmp/books.sql'`
+`docker cp mariadbceppic:/tmp/books.sql ./`
+
+en une seul ligne : 
+
+`docker exec mariadbceppic bash -c 'mysqldump -u root -proot books > /tmp/books.sql' && docker cp mariadb ceppic:/tmp/books.sql ./`
