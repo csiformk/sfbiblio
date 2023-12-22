@@ -22,7 +22,11 @@ class MailController extends AbstractController
 
         $mailer->send($email);
    
-        
-        return $this->render('mail/index.html.twig');
+        $this->addFlash(
+            'notice',
+            'Email envoyé !'
+        );
+
+        return $this->redirectToRoute('home');
     }
 }

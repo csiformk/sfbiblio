@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<section>
-{{ form(formContact) }}
-</section>
-{% endblock %}
+	<section>
+
+		{% if isSend is defined %}
+			<h1>Email sent !</h1>
+		{% else %}
+			{{ form(formContact) }}
+        {% endif %}
+
+		</section>
+	{% endblock %}

@@ -47,3 +47,10 @@ A l'aide de **Symfony** vous devez réaliser un site web qui listes des livres d
 - Installation du bundle mail : `composer require symfony/mailer`
 - Installation d'un *mail catcher* : **mailcatcher,mailhog,maildev**
 - On renseigne le **MAILER_DSN** dans **.env.local**
+
+## Reset Password
+
+- `composer require symfonycasts/reset-password-bundle`
+- `symofny console make:reset-password`
+- `symfony console make:migration`
+- `symfony console doctrine:migrations:migrate`
