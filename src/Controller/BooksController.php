@@ -33,7 +33,7 @@ class BooksController extends AbstractController
             $entityManager->persist($book);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_books_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('books', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('books/new.html.twig', [
@@ -59,7 +59,7 @@ class BooksController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_books_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('books', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('books/edit.html.twig', [
@@ -76,6 +76,6 @@ class BooksController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('app_books_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('books', [], Response::HTTP_SEE_OTHER);
     }
 }
