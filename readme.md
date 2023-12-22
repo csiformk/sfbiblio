@@ -54,3 +54,8 @@ A l'aide de **Symfony** vous devez réaliser un site web qui listes des livres d
 - `symofny console make:reset-password`
 - `symfony console make:migration`
 - `symfony console doctrine:migrations:migrate`
+
+# Faire un backup de ses bases de données dans les containers docker :
+
+`docker exec mariadbceppic bash -c 'mysqldump -u root -proot books > /tmp/books.sql' && docker cp mariadb
+ceppic:/tmp/books.sql ./`
