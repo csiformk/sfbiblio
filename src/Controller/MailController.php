@@ -14,7 +14,6 @@ class MailController extends AbstractController
     public function index(MailerInterface $mailer): Response
     {
         $email = (new Email())
-        ->from('admin@books.com')
         ->to('you@example.com')
         ->subject('Test envoie email!')
         ->text('Sending emails is fun again!')

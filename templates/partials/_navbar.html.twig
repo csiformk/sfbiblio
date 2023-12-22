@@ -1,0 +1,20 @@
+<nav>
+<section>
+	<a href="{{ path('email') }}" class="btn btn-warning">Test Email</a>
+	<a href="{{ path('contact') }}" class="btn btn-primary">Contact</a>
+
+	{% if is_granted('ROLE_ADMIN') %}
+		<a href="{{ path('books') }}" class="btn btn-alert">Books</a>
+		<a href="{{ path('app_user_index') }}" class="btn btn-alert">Users</a>
+	{% endif %}
+	</section>
+	<section>
+	{% if app.user %}
+		<a href="{{ path('logout') }}" class="btn btn-secondary">Déconnexion</a>
+	{% else %}
+		<a href="{{ path('login') }}" class="btn btn-primary">Connexion</a>
+		<a href="{{ path('register') }}" class="btn btn-primary">Enregistrement</a>
+	{% endif %}
+	</section>
+
+</nav>
